@@ -1,0 +1,49 @@
+{
+    "name": "hatchyu/laravel-eloquent-foundation",
+    "description": "Foundational Eloquent traits and scopes for Laravel applications",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Raju Koyilandy",
+            "email": "hello@rajeshmk.com"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "illuminate/database": "^11.0||^12.0||^13.0",
+        "illuminate/auth": "^11.0||^12.0||^13.0",
+        "illuminate/support": "^11.0||^12.0||^13.0"
+    },
+    "require-dev": {
+        "driftingly/rector-laravel": "^2.1",
+        "laravel/pint": "^1.28",
+        "rector/rector": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hatchyu\\Eloquent\\Foundation\\": "src/"
+        },
+        "files": [
+            "src/Support/helpers.php"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Hatchyu\\Eloquent\\Foundation\\EloquentFoundationServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "scripts": {
+        "format": "vendor/bin/pint"
+    }
+}
